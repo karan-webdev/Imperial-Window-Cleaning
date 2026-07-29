@@ -81,19 +81,6 @@ const cardImageVariant: Variants = {
   }),
 }
 
-const cardTextVariant: Variants = {
-  hidden: { opacity: 0, y: 14 },
-  visible: (i: number) => ({
-    opacity: 1,
-    y: 0,
-    transition: {
-      delay: i * 0.11 + 0.28, // was i * 0.07 + 0.18
-      duration: 0.65,          // was 0.45
-      ease: EASE,
-    } satisfies Transition,
-  }),
-}
-
 export default function Services() {
   const [gridSeen, setGridSeen] = useState(false)
   const filtered = services
