@@ -5,25 +5,88 @@
 }
 
 :root {
-  --accent: #0088f2;
-  --accent-glow: rgba(0, 136, 242, 0.35);
-  --accent-dark: #0066c0;
+  --accent: #c9a84c;
+  --accent-glow: rgba(164, 139, 67, 0.35);
+  --accent-soft: rgba(164, 139, 67, 0.15);
+  --accent-faint: rgba(164, 139, 67, 0.08);
+  --accent-shadow: rgba(164, 139, 67, 0.25);
+  --accent-dark: #c9a84c;
   --black: #0a0a0a;
   --dark: #111111;
   --dark-2: #1a1a1a;
   --grey-bg: #f0f0f0;
   --white: #ffffff;
   --text-muted: rgba(255,255,255,0.55);
-  --font-display: 'Bebas Neue', sans-serif;
-  --font-condensed: 'Barlow Condensed', sans-serif;
-  --font-body: 'DM Sans', sans-serif;
+  --font-display: 'Playfair Display', serif;
+  --font-condensed: 'Outfit', sans-serif;
+  --font-body: 'Outfit', sans-serif;
+  --text-gradient: linear-gradient(120deg, #bf953f 0%, #fcf6ba 45%, #b38728 100%);
+}
+
+.gradient-text {
+  background: var(--text-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.button-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 13px 24px;
+  border-radius: 999px;
+  font-family: var(--font-condensed);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 10px 30px var(--accent-shadow);
+}
+
+.button-pill-primary {
+  background: linear-gradient(120deg, #bf953f 0%, #fcf6ba 45%, #b38728 100%);
+  color: var(--black) ;
+  border: 1px solid transparent;
+}
+
+.button-pill-primary:hover,
+.button-pill-primary:focus-visible {
+  filter: brightness(0.93);
+}
+
+.button-pill-secondary {
+  background: rgba(255,255,255,0.06);
+  color: white;
+  border: 1px solid rgba(255,255,255,0.24);
+}
+
+.button-pill-secondary:hover,
+.button-pill-secondary:focus-visible {
+  border-color: white;
+}
+
+.button-pill-secondary-gold {
+  background: transparent;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+}
+
+.button-pill-secondary-gold:hover,
+.button-pill-secondary-gold:focus-visible {
+  background: rgba(164, 139, 67, 0.12);
+  border-color: var(--accent-dark);
+  color: var(--accent-dark);
 }
 
 html { scroll-behavior: smooth; }
 
 body {
   font-family: var(--font-body);
-  background: var(--white);
+  background: #0a0a0a;
   color: var(--black);
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;

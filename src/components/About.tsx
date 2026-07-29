@@ -115,14 +115,14 @@ export default function About() {
             <h2
               style={{
                 fontFamily: 'var(--font-display)',
-                fontSize: 'clamp(44px, 5vw, 72px)',
+                fontSize: 'clamp(36px, 4.6vw, 56px)',
                 lineHeight: 0.95,
                 color: '#0a0a0a',
                 marginBottom: '1.5rem',
               }}
             >
               CLEANING DONE<br />
-              <span style={{ color: 'var(--accent)' }}>PROPERLY.</span>
+              <span className="gradient-text">PROPERLY.</span>
             </h2>
 
             {/* STAGGER WRAPPER */}
@@ -144,7 +144,7 @@ export default function About() {
                 }}
               >
                 {splitWords(
-                  "At Prestige Pressure Solutions, we’re a locally owned and operated business proudly servicing the Perth region. As Perth locals ourselves, we understand the conditions, surfaces, and expectations of homes in the area — from limestone driveways to coastal wear and tear."
+                  "Imperial Window Cleaning is a locally trusted cleaning service for homes and properties across Brisbane and the Sunshine Coast. We focus on dependable, detail-driven work that leaves windows, exteriors and surfaces looking sharp and well cared for."
                 )}
               </motion.p>
 
@@ -159,7 +159,7 @@ export default function About() {
                 }}
               >
                 {splitWords(
-                  "Established in 2023, our focus has always been simple: deliver high-quality results with honest service and attention to detail."
+                  "Our approach is simple: provide honest service, clear communication and quality results on every visit."
                 )}
               </motion.p>
 
@@ -174,7 +174,7 @@ export default function About() {
                 }}
               >
                 {splitWords(
-                  "Behind the business is Hanz and Reshad, who oversee operations and ensure every job meets our standards. Working alongside them is Tommy, a trusted team member who helps deliver consistent, reliable results on-site."
+                  "We cover the services our clients ask for most, including window cleaning, soft washing, pressure washing, solar panel cleaning and gutter cleaning."
                 )}
               </motion.p>
 
@@ -189,7 +189,7 @@ export default function About() {
                 }}
               >
                 {splitWords(
-                  "Growing up in Perth, we know what local homeowners are looking for — not just a quick clean, but long-lasting results that actually make a difference. That’s why we take the time to use the right methods, equipment, and treatments for each job, whether it’s pressure cleaning, window cleaning, or exterior maintenance."
+                  "Whether it’s a regular maintenance clean or a one-off refresh, we bring the right equipment and careful technique to every job."
                 )}
               </motion.p>
 
@@ -204,7 +204,7 @@ export default function About() {
                 }}
               >
                 {splitWords(
-                  "We’re committed to providing a professional, hassle-free experience from start to finish — with clear communication, quality workmanship, and results you can trust."
+                  "We’re committed to making the process easy, professional and stress-free from the first call through to the final finish."
                 )}
               </motion.p>
 
@@ -245,23 +245,11 @@ export default function About() {
             <div style={{ display: 'inline-block' }}>
               <motion.a
                 href="#contact"
-                whileHover={{ backgroundColor: '#006edc' }}
-                whileTap={{ backgroundColor: '#005bb8' }}
+                whileHover={{ backgroundColor: 'var(--accent-dark)' }}
+                whileTap={{ backgroundColor: 'var(--accent-dark)' }}
                 transition={{ duration: 0.2 }}
-                style={{
-                  display: 'inline-flex',
-                  alignItems: 'center',
-                  background: 'var(--accent)',
-                  color: 'white',
-                  padding: '14px 26px',
-                  borderRadius: '8px',
-                  fontFamily: 'var(--font-condensed)',
-                  fontSize: '13px',
-                  letterSpacing: '0.08em',
-                  textDecoration: 'none',
-                  fontWeight: 700,
-                  textTransform: 'uppercase',
-                }}
+                className="button-pill button-pill-primary"
+                style={{ textDecoration: 'none' }}
               >
                 GET A QUOTE
               </motion.a>

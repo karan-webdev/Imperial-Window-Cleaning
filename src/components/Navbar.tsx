@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X, Phone } from 'lucide-react'
 import logo from '../assets/logo.png'
 
-const links = ['Services', 'Testimonials', 'Projects', 'FAQ']
+const links = ['Services', 'Testimonials', 'Projects', 'Contact']
 
 export default function Navbar() {
   const [open, setOpen] = useState(false)
@@ -85,16 +85,17 @@ export default function Navbar() {
         left: 0,
         right: 0,
         zIndex: 100,
-        background: scrolled ? 'rgba(10,10,10,0.75)' : '#000000',
+        background: scrolled ? 'rgba(10,10,10,0.75)' : '#0a0a0a',
         backdropFilter: 'blur(12px)',
         transition: 'all 0.3s ease',
+        borderBottom: scrolled ? '1px solid rgba(255,255,255,0.1)' : 'none',
       }}
     >
       <div
         style={{
           maxWidth: '1280px',
           margin: '0 auto',
-          padding: '0 2rem',
+          padding: '3rem 2rem',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'space-between',
@@ -105,7 +106,7 @@ export default function Navbar() {
         <a href="#" style={{ display: 'flex', alignItems: 'center' }}>
           <img
             src={logo}
-            alt="Prestige Pressure Solutions"
+            alt="Imperial Window Cleaning"
             style={{
               height: '100px',
               width: 'auto',
@@ -128,9 +129,9 @@ export default function Navbar() {
               key={link}
               href={`#${link.toLowerCase()}`}
               style={{
-                fontFamily: 'var(--font-condensed)',
+                fontFamily: 'var(--font-body)',
                 fontWeight: 600,
-                fontSize: '14px',
+                fontSize: '13px',
                 letterSpacing: '0.1em',
                 color: 'rgba(255,255,255,0.75)',
                 textDecoration: 'none',
@@ -143,7 +144,7 @@ export default function Navbar() {
                 e.currentTarget.style.color = 'rgba(255,255,255,0.75)'
               }}
             >
-              {link.toUpperCase()}
+              {link}
             </a>
           ))}
         </div>
@@ -151,27 +152,15 @@ export default function Navbar() {
         {/* CTA + MENU */}
         <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
           <motion.a
-            href="tel:0473908514"
-            className="cta-btn"
-            whileHover={{ backgroundColor: '#006edc' }}
-            whileTap={{ backgroundColor: '#005bb8' }}
+            href="tel:0413056207"
+            whileHover={{ backgroundColor: 'rgba(164, 139, 67, 0.16)' }}
+            whileTap={{ backgroundColor: 'rgba(164, 139, 67, 0.2)' }}
             transition={{ duration: 0.2 }}
-            style={{
-              display: 'flex',
-              alignItems: 'center',
-              gap: '8px',
-              background: 'var(--accent)',
-              color: 'white',
-              padding: '10px 20px',
-              borderRadius: '6px',
-              textDecoration: 'none',
-              fontFamily: 'var(--font-condensed)',
-              fontWeight: 600,
-              fontSize: '14px',
-            }}
+            className="button-pill button-pill-secondary-gold"
+            style={{ textDecoration: 'none', gap: '8px', padding: '11px 20px' }}
           >
             <Phone size={14} />
-            0473 908 514
+            0413 056 207
           </motion.a>
 
           <button
@@ -278,7 +267,7 @@ export default function Navbar() {
 
               {/* CTA */}
               <a
-                href="tel:0473908514"
+                href="tel:0413056207"
                 style={{
                   marginTop: 'auto',
                   marginBottom: '4rem',
@@ -297,7 +286,7 @@ export default function Navbar() {
                 }}
               >
                 <Phone size={16} />
-                0473 908 514
+                0413 056 207
               </a>
             </motion.div>
           </>

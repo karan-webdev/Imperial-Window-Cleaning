@@ -12,57 +12,57 @@ const EASE = [0.22, 1, 0.36, 1] as const
 
 const testimonials = [
   {
-    name: 'Youssef Aria',
+    name: 'Danielle Morris',
     location: 'Google Review',
     rating: 5,
-    text: "I couldn't be happier with the work done by Prestige Pressure Solutions. They did an excellent job cleaning my driveway and backyard patio, both came up looking brand new. Highly recommend!",
-    service: 'Driveway & Patio Cleaning',
-    initials: 'YA',
+    text: 'I got them out to soft wash my house. Cannot recommend them enough. 5 stars!',
+    service: 'House Soft Washing',
+    initials: 'DM',
     avatar: testimonial_1,
   },
   {
-    name: 'Shack',
+    name: 'Josh Whiting',
     location: 'Google Review',
     rating: 5,
-    text: "Highly recommend Prestige Pressure Solutions I recently hired them for pressure washing for my back yard, drive way and patio, the results were outstanding. They were very professional, thorough and explained every step of the process. Their pricing was fair, and the quality far exceeded my expectations. I highly recommend them to anyone looking for reliable and high-quality pressure washing services.",
-    service: 'Pressure Washing',
-    initials: 'SH',
+    text: 'Such a great company. They came out and cleaned my driveway hassle-free. Would recommend them to anyone. Affordable prices as well.',
+    service: 'Driveway Cleaning',
+    initials: 'JW',
     avatar: testimonial_2,
   },
   {
-    name: 'Nolo',
+    name: 'William Jenkins',
     location: 'Google Review',
     rating: 5,
-    text: "Prestige Pressure Solutions did an amazing job. They were professional, quick, and the results were outstanding. My property looks cleaner than it has in years. Great communication and fair pricing as well. Highly recommend their services!",
-    service: 'Property Cleaning',
-    initials: 'NO',
+    text: 'Cleaned our double-storey house. We will definitely be getting them back out next time we need anything cleaned on the exterior of our property.',
+    service: 'Exterior House Cleaning',
+    initials: 'WJ',
     avatar: testimonial_3,
   },
   {
-    name: 'Frouzan Yarmohamm',
+    name: 'Gene Dutton99',
     location: 'Google Review',
     rating: 5,
-    text: "Prestige pressure solutions cleaned the driveway and Bbq area of my house. Hanz did a fantastic job cleaning all the stains n molds. Great professional and well spoken guys and team work. The follow up call add that extra, that you don't get now a days. I would recommend him strongly.",
-    service: 'Driveway & BBQ Cleaning',
-    initials: 'FY',
+    text: 'Very professional and efficient. Highly recommended. My pool area looks spectacular.',
+    service: 'Pool Area Cleaning',
+    initials: 'GD',
     avatar: testimonial_4,
   },
   {
-    name: 'Katie Trinh',
+    name: 'Josie',
     location: 'Google Review',
     rating: 5,
-    text: "I recently had Prestige Pressure Solutions take care of my property, and I couldn't be happier with the experience. They truly made my house feel like home again. The team took their time and paid attention to every detail, leaving everything looking fresh, clean, and almost brand new. On top of their amazing work, they were incredibly friendly and professional.",
-    service: 'Full Property Clean',
-    initials: 'KT',
+    text: 'Amazing job on our driveway.',
+    service: 'Driveway Cleaning',
+    initials: 'JO',
     avatar: testimonial_5,
   },
   {
-    name: 'Gucci Maynne',
+    name: 'Clinton Joe',
     location: 'Google Review',
     rating: 5,
-    text: "Had an amazing experience with Prestige Pressure Solutions! They did a full clean of my house exterior, driveway, and windows (inside and out), and the results were honestly better than I expected. Everything looks fresh, bright, and like new again. The team was professional, on time, and really paid attention to detail.",
-    service: 'Full Exterior Clean',
-    initials: 'GM',
+    text: 'Contacted the team at Imperial Window Cleaning for a last-minute driveway and patio clean. They managed to fit me into the schedule within 48 hours. Came out and did an amazing job. Couldn’t recommend them enough.',
+    service: 'Driveway & Patio Cleaning',
+    initials: 'CJ',
     avatar: testimonial_6,
   },
 ]
@@ -111,7 +111,7 @@ export default function Testimonials() {
               marginBottom: '1rem',
             }}
           >
-            — WHAT PERTH IS SAYING
+            — WHAT CLIENTS ARE SAYING
           </motion.div>
 
           <motion.h2
@@ -121,14 +121,15 @@ export default function Testimonials() {
             transition={{ duration: 0.85, delay: 0.1, ease: EASE }}
             style={{
               fontFamily: 'var(--font-display)',
-              fontSize: 'clamp(52px, 7vw, 90px)',
+              fontSize: 'clamp(32px, 4vw, 42px)',
               color: 'white',
-              lineHeight: 0.92,
+              lineHeight: 1.05,
               margin: 0,
+              fontWeight: 700,
+              textTransform: 'none',
             }}
           >
-            REAL PEOPLE.<br />
-            <span style={{ color: 'var(--accent)' }}>REAL RESULTS.</span>
+            TRUSTED BY <span className="gradient-text">OUR CLIENTS</span>
           </motion.h2>
         </div>
 
@@ -156,7 +157,7 @@ export default function Testimonials() {
               style={{
                 background: 'rgba(255,255,255,0.03)',
                 border: '1px solid rgba(255,255,255,0.07)',
-                borderRadius: '20px',
+                // borderRadius: '12px',
                 padding: '3.5rem',
                 position: 'relative',
                 overflow: 'hidden',
@@ -189,8 +190,8 @@ export default function Testimonials() {
                 </div>
 
                 <div style={{
-                  background: 'rgba(0,136,242,0.1)',
-                  border: '1px solid rgba(0,136,242,0.2)',
+                  background: 'var(--accent-soft)',
+                  border: '1px solid var(--accent-glow)',
                   borderRadius: '100px',
                   padding: '6px 16px',
                   fontFamily: 'var(--font-condensed)',
@@ -262,7 +263,7 @@ export default function Testimonials() {
                   cursor: 'pointer', color: 'white',
                   display: 'flex', alignItems: 'center', justifyContent: 'center',
                 }}
-                onMouseEnter={(e) => { e.currentTarget.style.background = '#0a6fd1' }}
+                onMouseEnter={(e) => { e.currentTarget.style.background = 'var(--accent-dark)' }}
                 onMouseLeave={(e) => { e.currentTarget.style.background = 'var(--accent)' }}
               >
                 <ChevronRight size={18} />
@@ -280,7 +281,7 @@ export default function Testimonials() {
           style={{ marginTop: '4rem', display: 'flex', justifyContent: 'center' }}
         >
           <a
-            href="https://www.google.com/search?sca_esv=e42243e293ad428e&rlz=1C1CHBF_enAU1094AU1094&sxsrf=ANbL-n7fdYhpTlROYogDUYeW8reShtwSgg:1777009370296&si=AL3DRZEsmMGCryMMFSHJ3StBhOdZ2-6yYkXd_doETEE1OR-qObHOCC6vfESMX3_p0c5khPuQK56to-6qeITa09Op6Q3Y29lDOl2_meTJbw0d4y0-3S-DLGSz0tEdLf9z8kGV1uDQIAn-tCfZTA58avqOeBrzKPtm7w%3D%3D&q=Prestige+Pressure+Solutions+Reviews&sa=X&ved=2ahUKEwjgup3i44WUAxVJRmwGHSpGHpUQ0bkNegQIMxAF&biw=1536&bih=730&dpr=1.25"
+            href="https://www.google.com/search?q=imperial+window+cleaning+brisbane&rlz=1C1CHBF_enAU1094AU1094&oq=imperial+window+cleaning+brisbane&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIGCAEQRRg8MgYIAhBFGDwyBggDEEUYPNIBBzI5MmowajeoAgCwAgA&sourceid=chrome&source=chrome.ob&ie=UTF-8#lrd=0x4c1de21141633ebd:0xcb41edf12d5c611d,1,,,,"
             target="_blank"
             rel="noopener noreferrer"
             style={{
@@ -315,7 +316,7 @@ export default function Testimonials() {
                 ))}
               </div>
               <div style={{ fontSize: '11px', color: 'rgba(255,255,255,0.65)', marginTop: '4px', fontWeight: 600 }}>
-                16 reviews
+                8 reviews
               </div>
             </div>
           </a>

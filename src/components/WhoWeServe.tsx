@@ -18,7 +18,7 @@ const segments = [
       'Solar panel cleaning',
       'Limestone restoration & sealing',
     ],
-    accent: '#0088f2',
+    accent: 'var(--accent)',
     img: residential,
   },
   {
@@ -34,7 +34,7 @@ const segments = [
       'Graffiti & stain removal',
       'Scheduled maintenance plans',
     ],
-    accent: '#0088f2',
+    accent: 'var(--accent)',
     img: 'https://www.portlincoln.sa.gov.au/__data/assets/image/0018/121581/varieties/banner.jpg',
   },
   {
@@ -50,7 +50,7 @@ const segments = [
       'Preferred agent pricing available',
       'Ongoing property maintenance',
     ],
-    accent: '#0088f2',
+    accent: 'var(--accent)',
     img: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=900&q=80',
   },
   {
@@ -66,7 +66,7 @@ const segments = [
       'Priority emergency scheduling',
       'Consolidated invoicing per complex',
     ],
-    accent: '#0088f2',
+    accent: 'var(--accent)',
     img: 'https://images.unsplash.com/photo-1486325212027-8081e485255e?w=900&q=80',
   },
 ]
@@ -105,12 +105,12 @@ export default function WhoWeServe() {
             transition={{ duration: 0.9, delay: 0.1, ease: EASE }}
             style={{
               fontFamily: 'var(--font-display)',
-              fontSize: 'clamp(52px, 7vw, 90px)',
+              fontSize: 'clamp(40px, 5.2vw, 68px)',
               color: 'white', lineHeight: 0.92, margin: 0,
             }}
           >
             BUILT FOR<br />
-            <span style={{ color: 'var(--accent)' }}>EVERY CLIENT.</span>
+            <span className="gradient-text">EVERY CLIENT.</span>
           </motion.h2>
         </div>
 
@@ -229,8 +229,8 @@ onMouseLeave={(e) => {
                 >
                   <div style={{
                     width: '20px', height: '20px', borderRadius: '50%',
-                    background: 'rgba(0,136,242,0.15)',
-                    border: '1px solid rgba(0,136,242,0.3)',
+                    background: 'var(--accent-soft)',
+                    border: '1px solid var(--accent-glow)',
                     flexShrink: 0,
                   }} />
                   <span style={{ fontFamily: 'var(--font-body)', fontSize: '14px', color: 'rgba(255,255,255,0.7)' }}>
@@ -242,17 +242,11 @@ onMouseLeave={(e) => {
 
             <motion.a
               href="#contact"
-              whileHover={{ backgroundColor: '#006edc' }}
-              whileTap={{ backgroundColor: '#005bb8' }}
+              whileHover={{ backgroundColor: 'var(--accent-dark)' }}
+              whileTap={{ backgroundColor: 'var(--accent-dark)' }}
               transition={{ duration: 0.2 }}
-              style={{
-                display: 'inline-flex',
-                background: 'var(--accent)', color: 'white',
-                padding: '14px 26px', borderRadius: '8px',
-                fontFamily: 'var(--font-condensed)', fontWeight: 700,
-                fontSize: '13px', letterSpacing: '0.08em',
-                textTransform: 'uppercase', textDecoration: 'none',
-              }}
+              className="button-pill button-pill-primary"
+              style={{ textDecoration: 'none' }}
             >
               GET A FREE QUOTE →
             </motion.a>

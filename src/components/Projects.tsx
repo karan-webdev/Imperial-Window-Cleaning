@@ -1,35 +1,38 @@
 import { useRef, useEffect } from 'react'
 import { motion } from 'framer-motion'
-import before_1 from '../assets/before_1.jpg'
-import after_1 from '../assets/after_1.jpg'
+import before_1 from '../assets/before_1.webp'
+import after_1 from '../assets/after_1.webp'
 import before_2 from '../assets/before_2.webp'
 import after_2 from '../assets/after_2.webp'
-import after_3 from '../assets/after_3.png'
-import before_3 from '../assets/before_3.png'
-import after_4 from '../assets/after_4.jpg'
-import before_4 from '../assets/before_4.jpg'
-import before_5 from '../assets/before_5.jpeg'
-import after_5 from '../assets/after_5.jpeg'
-import before_6 from '../assets/before_6.jpeg'
-import after_6 from '../assets/after_6.jpeg'
-import before_7 from '../assets/before_7.jpeg'
-import after_7 from '../assets/after_7.jpeg'
+import after_3 from '../assets/after_8.webp'
+import before_3 from '../assets/before_8.webp'
+import after_4 from '../assets/after_4.webp'
+import before_4 from '../assets/before_4.webp'
+import before_5 from '../assets/before_5.webp'
+import after_5 from '../assets/after_5.webp'
+import before_6 from '../assets/before_6.webp'
+import after_6 from '../assets/after_6.webp'
+import before_7 from '../assets/before_7.webp'
+import after_7 from '../assets/after_7.webp'
+import before_9 from '../assets/before_9.webp'
+import after_9 from '../assets/after_9.webp'
 
 const EASE = [0.22, 1, 0.36, 1] as const
 
 const projects = [
-  { title: 'Courtyard Paver Restoration', location: 'Location, WA', tag: 'PAVERS', before: before_1, after: after_1 },
-  { title: 'Patio & Pathway Refurbishment', location: 'Location, WA', tag: 'PAVERS', before: before_2, after: after_2 },
-  { title: 'Backyard Brick Cleaning', location: 'Location, WA', tag: 'BRICK', before: before_3, after: after_3 },
-  { title: 'Courtyard Rejuvenation', location: 'Location, WA', tag: 'PAVERS', before: before_4, after: after_4 },
-  { title: 'Concrete Revival', location: 'Location, WA', tag: 'PAVERS', before: before_5, after: after_5 },
-  { title: 'Backyard Paver Restoration', location: 'Location, WA', tag: 'BRICK', before: before_6, after: after_6 },
-  { title: 'Walkway Deep Clean', location: 'Location, WA', tag: 'PAVERS', before: before_7, after: after_7 },
-]
+  { title: 'Full Exterior House Wash', location: 'Brisbane, QLD', tag: 'HOUSE WASH', before: before_1, after: after_1 },
+  { title: 'Driveway Pressure Cleaning', location: 'Brisbane, QLD', tag: 'DRIVEWAY', before: before_2, after: after_2 },
+  { title: 'Driveway Restoration', location: 'Brisbane, QLD', tag: 'DRIVEWAY', before: before_3, after: after_3 },
+  { title: 'Apartment Exterior Cleaning', location: 'Brisbane, QLD', tag: 'BUILDING', before: before_4, after: after_4 },
+  { title: 'Driveway Deep Clean', location: 'Brisbane, QLD', tag: 'DRIVEWAY', before: before_5, after: after_5 },
+  { title: 'Footpath Pressure Cleaning', location: 'Brisbane, QLD', tag: 'FOOTPATH', before: before_6, after: after_6 },
+  { title: 'Concrete Surface Cleaning', location: 'Brisbane, QLD', tag: 'CONCRETE', before: before_7, after: after_7 },
+  { title: 'Pathway Restoration', location: 'Brisbane, QLD', tag: 'PATHWAY', before: before_9, after: after_9 },
+];
 
 const stats = [
   { num: '500+', label: 'JOBS COMPLETED' },
-  { num: '100%', label: 'MOBILE SERVICE' },
+  { num: '100%', label: 'SATISFACTION RATE' },
   { num: '5', label: 'AVERAGE RATING', isRating: true },
   { num: '0', label: 'COMPLAINTS' },
 ]
@@ -113,7 +116,13 @@ function SliderCard({ project, index }: { project: Project; index: number }) {
         delay: (index % 2) * 0.08,
         ease: [0.16, 1, 0.3, 1],
       }}
-      style={{ borderRadius: '16px', overflow: 'hidden' }}
+      style={{
+        borderRadius: '0',
+        overflow: 'hidden',
+        border: '1px solid rgba(255,255,255,0.1)',
+        padding: '20px',
+        background: 'rgba(255,255,255,0.03)',
+      }}
     >
       <div
         ref={wrapRef}
@@ -188,14 +197,13 @@ function SliderCard({ project, index }: { project: Project; index: number }) {
               width: '48px',
               height: '48px',
               borderRadius: '50%',
-              background: '#0087F2',
-              color: '#fff',
+              background: '#1a1a1a',
+              color: 'var(--accent)',
               fontWeight: 900,
               fontSize: '18px',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
-              boxShadow: '0 4px 20px rgba(0,0,0,0.4)',
             }}
           >
             ⇆
@@ -207,8 +215,8 @@ function SliderCard({ project, index }: { project: Project; index: number }) {
             position: 'absolute',
             top: 12,
             left: 12,
-            background: '#000',
-            color: '#fff',
+            background: 'white',
+            color: '#0a0a0a',
             padding: '6px 12px',
             fontSize: '12px',
             fontWeight: 900,
@@ -224,8 +232,8 @@ function SliderCard({ project, index }: { project: Project; index: number }) {
             position: 'absolute',
             top: 12,
             right: 12,
-            background: '#0087F2',
-            color: '#fff',
+            background: 'var(--accent)',
+            color: 'black',
             padding: '6px 12px',
             fontSize: '12px',
             fontWeight: 900,
@@ -234,30 +242,6 @@ function SliderCard({ project, index }: { project: Project; index: number }) {
           }}
         >
           AFTER
-        </div>
-
-        <div
-          style={{
-            position: 'absolute',
-            bottom: 16,
-            left: 16,
-            zIndex: 2,
-            color: 'white',
-          }}
-        >
-          <div
-            style={{
-              fontSize: '14px',
-              fontWeight: 800,
-              letterSpacing: '0.06em',
-              textTransform: 'uppercase',
-            }}
-          >
-            {project.title}
-          </div>
-          <div style={{ fontSize: '12px', opacity: 0.8 }}>
-            {project.location}
-          </div>
         </div>
 
         <div
@@ -277,6 +261,33 @@ function SliderCard({ project, index }: { project: Project; index: number }) {
           DRAG
         </div>
       </div>
+
+      <div
+        style={{
+          marginTop: '18px',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          gap: '6px',
+          textAlign: 'center',
+          color: 'white',
+        }}
+      >
+        <div
+          style={{
+            fontSize: '14px',
+            fontWeight: 800,
+            letterSpacing: '0.06em',
+            textTransform: 'uppercase',
+            maxWidth: '100%',
+          }}
+        >
+          {project.title}
+        </div>
+        <div style={{ fontSize: '12px', opacity: 0.8 }}>
+          {project.location}
+        </div>
+      </div>
     </motion.div>
   )
 }
@@ -285,7 +296,7 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      style={{ background: '#f2f2f0', padding: '5rem 1.5rem' }}
+      style={{ background: '#0a0a0a', padding: '5rem 1.5rem' }}
     >
       <div style={{ maxWidth: 1000, margin: '0 auto' }}>
         <motion.div
@@ -318,10 +329,11 @@ export default function Projects() {
               lineHeight: 0.92,
               fontWeight: 900,
               margin: 0,
+              color: 'white',
             }}
           >
             BEFORE <br />
-            <span style={{ color: '#0087F2' }}>& AFTER</span>
+            <span className="gradient-text">& AFTER</span>
           </motion.h2>
 
           <motion.p
@@ -332,13 +344,13 @@ export default function Projects() {
             style={{
               maxWidth: '560px',
               margin: '1.2rem 0 0',
-              color: '#666',
+              color: 'rgba(255,255,255,0.72)',
               fontSize: '15px',
               lineHeight: 1.6,
               textAlign: 'left',
             }}
           >
-            Real transformations from recent jobs across WA showcasing the
+            Real transformations from recent jobs across Brisbane showcasing the
             quality, detail, and finish we deliver on every project.
           </motion.p>
         </div>
@@ -348,7 +360,7 @@ export default function Projects() {
           style={{
             display: 'grid',
             gridTemplateColumns: 'repeat(2, 1fr)',
-            gap: 14,
+            gap: 30,
           }}
         >
           {projects.map((p, i) => (
@@ -408,7 +420,7 @@ export default function Projects() {
           width: 1px; height: 60%;
           background: rgba(255,255,255,0.12);
         }
-        .stat-num { font-size: 44px; font-weight: 900; color: #0087F2; }
+        .stat-num { font-size: 44px; font-weight: 900; color: var(--accent); }
         .stat-label { font-size: 11px; color: rgba(255,255,255,0.55); }
 
         .rating-wrap {

@@ -3,14 +3,11 @@ import { FaInstagram, FaFacebookF } from 'react-icons/fa'
 import logo from '../assets/logo.png'
 
 const services = [
-  'Pressure Washing',
-  'Soft Washing',
   'Window Cleaning',
-  'Gutter Cleaning',
-  'Roof Cleaning',
+  'Soft Washing',
+  'Pressure Washing',
   'Solar Panel Cleaning',
-  'Rust & Stain Removal',
-  'Limestone Restoration',
+  'Gutter Cleaning',
 ]
 
 export default function Footer() {
@@ -51,14 +48,14 @@ export default function Footer() {
                 marginBottom: '1.5rem',
               }}
             >
-              Perth's mobile pressure washing specialists. We come to you. No mess, no fuss, just spotless results.
+              Reliable window and exterior cleaning for Brisbane and the Sunshine Coast. No fuss, just a polished finish.
             </p>
 
             {/* Social */}
             <div style={{ display: 'flex', gap: '10px' }}>
               {[
-                { icon: FaFacebookF, label: 'Facebook', href: 'https://www.facebook.com/p/Prestige-Pressure-Solutions-61583877321797/' },
-                { icon: FaInstagram, label: 'Instagram', href: 'https://www.instagram.com/prestigepressuresolutions/' },
+                { icon: FaFacebookF, label: 'Facebook', href: '#' },
+                { icon: FaInstagram, label: 'Instagram', href: '#' },
               ].map(({ icon: Icon, label, href }) => (
                 <a
                   key={label}
@@ -81,9 +78,9 @@ export default function Footer() {
                   }}
                   onMouseEnter={e => {
                     const el = e.currentTarget as HTMLElement
-                    el.style.borderColor = 'rgba(0,136,242,0.4)'
+                    el.style.borderColor = 'var(--accent-glow)'
                     el.style.color = 'var(--accent)'
-                    el.style.background = 'rgba(0,136,242,0.08)'
+                    el.style.background = 'var(--accent-faint)'
                   }}
                   onMouseLeave={e => {
                     const el = e.currentTarget as HTMLElement
@@ -153,10 +150,10 @@ export default function Footer() {
 
             <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
               {[
-                { icon: Phone, text: '0473 908 514', href: 'tel:0473908514' },
-                { icon: Mail, text: 'prestigepressuresolutionswa@gmail.com', href: 'mailto:prestigepressuresolutionswa@gmail.com' },
-                { icon: Globe, text: 'prestigepressuresolutions.com', href: 'https://prestigepressuresolutions.com' },
-                { icon: MapPin, text: 'Perth, WA', href: '#' },
+                { icon: Phone, text: '0413 056 207', href: 'tel:0413056207' },
+                { icon: Mail, text: 'imperialwindowcleaning@gmail.com', href: 'mailto:imperialwindowcleaning@gmail.com' },
+                { icon: Globe, text: 'imperialwindowcleaning.com', href: '#' },
+                { icon: MapPin, text: 'Brisbane - Sunshine Coast', href: '#' },
               ].map(({ icon: Icon, text, href }) => (
                 <a
                   key={text}
@@ -204,7 +201,7 @@ export default function Footer() {
               color: 'rgba(255,255,255,0.25)',
             }}
           >
-            © {new Date().getFullYear()} Prestige Pressure Solutions. All rights reserved.
+            © {new Date().getFullYear()} Imperial Window Cleaning. All rights reserved.
           </div>
 
           

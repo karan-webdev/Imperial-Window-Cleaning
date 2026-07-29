@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { Phone, Mail, User, MapPin, MessageSquare } from 'lucide-react'
-import contact from '../assets/contact.jpg'
+import contact from '../assets/contact.webp'
 
 const EASE = [0.22, 1, 0.36, 1] as const
 
@@ -67,27 +67,32 @@ export default function ContactBanner() {
             viewport={{ once: true, margin: '-80px 0px' }}
             transition={{ duration: 0.9, ease: EASE }}
           >
-            <motion.div
-              initial={{ opacity: 0, y: 16 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-80px 0px' }}
-              transition={{ duration: 0.7, delay: 0.15, ease: EASE }}
+           <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.05 }}
               style={{
                 display: 'inline-flex',
                 alignItems: 'center',
-                gap: '8px',
-                background: 'rgba(0,135,242,0.15)',
-                border: '1px solid rgba(0,135,242,0.35)',
-                borderRadius: '100px',
-                padding: '6px 18px',
+                gap: '12px',
+                marginBottom: '1.25rem',
+                color: 'rgba(255,255,255,0.85)',
                 fontFamily: 'var(--font-condensed)',
-                fontWeight: 800,
-                fontSize: '12px',
-                letterSpacing: '0.15em',
-                color: '#0087f2',
-                marginBottom: '2rem',
+                fontSize: '13px',
+                letterSpacing: '0.14em',
+                textTransform: 'uppercase',
+                whiteSpace: 'nowrap',
               }}
             >
+              <span
+                style={{
+                  display: 'inline-block',
+                  width: '40px',
+                  minWidth: '40px',
+                  height: '2px',
+                  background: 'var(--accent)',
+                }}
+              />
               GET A FREE QUOTE
             </motion.div>
 
@@ -106,7 +111,7 @@ export default function ContactBanner() {
             >
               LET&apos;S BOOK
               <br />
-              <span style={{ color: '#0087f2' }}>YOUR CLEAN</span>
+              <span className="gradient-text">YOUR CLEAN</span>
             </motion.h2>
 
             <motion.p
@@ -122,8 +127,7 @@ export default function ContactBanner() {
                 maxWidth: '420px',
               }}
             >
-              Fill out the form and we'll get back to you fast. No spam, just a real quote
-              from a local business.
+              Fill out the form and we'll get back to you fast with a real quote for Brisbane and Sunshine Coast properties.
             </motion.p>
 
             {/* CONTACT INFO */}
@@ -139,8 +143,8 @@ export default function ContactBanner() {
               }}
             >
               {[
-                { icon: Phone, text: '0473 908 514' },
-                { icon: Mail, text: 'prestigepressuresolutionswa@gmail.com' },
+                { icon: Phone, text: '0413 056 207' },
+                { icon: Mail, text: 'imperialwindowcleaning@gmail.com' },
               ].map((item, i) => (
                 <motion.div
                   key={i}
@@ -150,7 +154,7 @@ export default function ContactBanner() {
                   transition={{ duration: 0.6, delay: 0.35 + i * 0.1, ease: EASE }}
                   style={{ display: 'flex', alignItems: 'center', gap: '8px' }}
                 >
-                  <item.icon size={14} color="#0087f2" />
+                  <item.icon size={14} color="var(--accent)" />
                   {item.text}
                 </motion.div>
               ))}
@@ -166,13 +170,13 @@ export default function ContactBanner() {
             style={{
               background: 'rgba(255,255,255,0.06)',
               border: '1px solid rgba(255,255,255,0.12)',
-              borderRadius: '18px',
+              borderRadius: '20px',
               padding: '2rem',
               backdropFilter: 'blur(12px)',
             }}
           >
             <form
-              action="https://formspree.io/f/xbjndlza"
+              // action="https://formspree.io/f/xbjndlza"
               method="POST"
               style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}
             >
@@ -192,7 +196,7 @@ export default function ContactBanner() {
                   transition={{ duration: 0.55, delay: 0.25 + i * 0.08, ease: EASE }}
                   style={inputWrap}
                 >
-                  <field.icon size={16} color="#0087f2" />
+                  <field.icon size={16} color="var(--accent)" />
                   <input
                     name={field.name}
                     placeholder={field.placeholder}
@@ -208,7 +212,7 @@ export default function ContactBanner() {
                 transition={{ duration: 0.55, delay: 0.5, ease: EASE }}
                 style={{ ...inputWrap, alignItems: 'flex-start' }}
               >
-                <MessageSquare size={16} color="#0087f2" />
+                <MessageSquare size={16} color="var(--accent)" />
                 <textarea
                   name="message"
                   placeholder="What do you need cleaned?"
@@ -225,22 +229,11 @@ export default function ContactBanner() {
                 transition={{ duration: 0.55, delay: 0.58, ease: EASE }}
                 whileHover={{
                   translateY: -2,
-                  boxShadow: '0 14px 40px rgba(0,135,242,0.4)',
+                  boxShadow: '0 14px 40px rgba(164, 139, 67, 0.4)',
                 }}
                 whileTap={{ translateY: 0 }}
-                style={{
-                  marginTop: '10px',
-                  background: '#0087f2',
-                  color: 'white',
-                  border: 'none',
-                  padding: '14px',
-                  borderRadius: '10px',
-                  fontFamily: 'var(--font-condensed)',
-                  fontWeight: 800,
-                  letterSpacing: '0.05em',
-                  cursor: 'pointer',
-                  boxShadow: '0 10px 30px rgba(0,135,242,0.25)',
-                }}
+                className="button-pill button-pill-primary"
+                style={{ marginTop: '10px', border: 'none', cursor: 'pointer' }}
               >
                 REQUEST QUOTE
               </motion.button>

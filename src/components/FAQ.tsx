@@ -196,13 +196,13 @@ export default function FAQ() {
 
           <h2 style={{
             fontFamily: 'var(--font-display)',
-            fontSize: 'clamp(48px, 6vw, 80px)',
+            fontSize: 'clamp(38px, 4.8vw, 60px)',
             lineHeight: 0.95,
             color: '#111',
             marginBottom: '1rem',
           }}>
             STRAIGHT<br />
-            <span style={{ color: 'var(--accent)' }}>ANSWERS.</span>
+            <span className="gradient-text">ANSWERS.</span>
           </h2>
 
           <p style={{
@@ -257,7 +257,7 @@ export default function FAQ() {
 
                   <motion.div
                     whileHover={{ backgroundColor: isOpen ? 'var(--accent)' : '#e6e6e6' }}
-                    whileTap={{ backgroundColor: isOpen ? '#005bb8' : '#dcdcdc' }}
+                    whileTap={{ backgroundColor: isOpen ? 'var(--accent-dark)' : '#dcdcdc' }}
                     transition={{ duration: 0.15 }}
                     style={{
                       width: '34px',
@@ -335,20 +335,26 @@ export default function FAQ() {
           </div>
 
           <motion.a
-            href="tel:0473908514"
-            whileHover={{ backgroundColor: '#006edc' }}
-            whileTap={{ backgroundColor: '#005bb8' }}
+            href="tel:0413056207"
+            whileHover={{ backgroundColor: 'var(--accent-dark)' }}
+            whileTap={{ backgroundColor: 'var(--accent-dark)' }}
             transition={{ duration: 0.2 }}
             style={{
               display: 'inline-flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              gap: '10px',
               background: 'var(--accent)',
               color: 'white',
               textDecoration: 'none',
-              padding: '14px 28px',
-              borderRadius: '10px',
+              padding: '13px 24px',
+              borderRadius: '999px',
               fontFamily: 'var(--font-condensed)',
               fontWeight: 800,
-              letterSpacing: '0.05em',
+              letterSpacing: '0.12em',
+              fontSize: '13px',
+              textTransform: 'uppercase',
+              boxShadow: '0 10px 30px var(--accent-shadow)',
             }}
           >
             CALL NOW
