@@ -162,7 +162,7 @@ export default function Hero() {
               maxWidth: '620px',
             }}
           >
-            Flawless
+            Crystal
             <br />
             <span
               style={{
@@ -173,10 +173,10 @@ export default function Hero() {
                 color: 'transparent',
               }}
             >
-              Clarity,
+              Clear 
             </span>
             <br />
-            Crafted.
+            Windows
           </motion.h1>
 
           {/* SUBTEXT */}
@@ -193,7 +193,7 @@ export default function Hero() {
               marginBottom: '2rem',
             }}
           >
-            From soaring high-rise facades to prestige residential glass, we treat every pane like fine crystal — streak-free, fully insured, and finished by hand.
+           From residential homes to commercial properties, we deliver spotless, streak-free windows with meticulous attention to detail. Fully insured and completed with professional care, every clean leaves your glass looking its best.
           </motion.p>
 
           {/* CTA */}
