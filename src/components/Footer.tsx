@@ -54,8 +54,8 @@ export default function Footer() {
             {/* Social */}
             <div style={{ display: 'flex', gap: '10px' }}>
               {[
-                { icon: FaFacebookF, label: 'Facebook', href: '#' },
-                { icon: FaInstagram, label: 'Instagram', href: '#' },
+                { icon: FaFacebookF, label: 'Facebook', href: 'https://www.facebook.com/p/Imperial-Window-Cleaning-61577655590163/' },
+                { icon: FaInstagram, label: 'Instagram', href: 'https://www.instagram.com/imperialwindowcleaning.au/' },
               ].map(({ icon: Icon, label, href }) => (
                 <a
                   key={label}

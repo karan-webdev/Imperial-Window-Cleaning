@@ -126,20 +126,13 @@ function SliderCard({ project, index }: { project: Project; index: number }) {
     >
       <div
         ref={wrapRef}
-        onMouseDown={(e: React.MouseEvent) => {
-          dragging.current = true
-          setPos(e.clientX)
-        }}
-        onTouchStart={(e: React.TouchEvent) => {
-          dragging.current = true
-          setPos(e.touches[0].clientX)
-        }}
         style={{
           position: 'relative',
           height: '260px',
           overflow: 'hidden',
           cursor: 'ew-resize',
           userSelect: 'none',
+          touchAction: 'pan-y',
         }}
       >
         <div
@@ -176,6 +169,16 @@ function SliderCard({ project, index }: { project: Project; index: number }) {
 
         <div
           ref={dividerRef}
+          onMouseDown={(e: React.MouseEvent) => {
+            e.preventDefault()
+            dragging.current = true
+            setPos(e.clientX)
+          }}
+          onTouchStart={(e: React.TouchEvent) => {
+            e.stopPropagation()
+            dragging.current = true
+            setPos(e.touches[0].clientX)
+          }}
           style={{
             position: 'absolute',
             top: 0,
@@ -185,7 +188,7 @@ function SliderCard({ project, index }: { project: Project; index: number }) {
             background: 'white',
             transform: 'translateX(-50%)',
             zIndex: 3,
-            pointerEvents: 'none',
+            pointerEvents: 'auto',
           }}
         >
           <div
@@ -204,6 +207,7 @@ function SliderCard({ project, index }: { project: Project; index: number }) {
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
+              touchAction: 'none',
             }}
           >
             ⇆

@@ -268,20 +268,16 @@ export default function Navbar() {
               {/* CTA */}
               <a
                 href="tel:0413056207"
+                className="button-pill button-pill-primary"
                 style={{
                   marginTop: 'auto',
                   marginBottom: '4rem',
-                  display: 'flex',
+                  display: 'inline-flex',
                   alignItems: 'center',
                   justifyContent: 'center',
+                  width: '100%',
                   gap: '10px',
-                  background: 'var(--accent)',
-                  color: 'white',
-                  padding: '14px 20px',
-                  borderRadius: '8px',
                   textDecoration: 'none',
-                  fontFamily: 'var(--font-condensed)',
-                  fontWeight: 600,
                   fontSize: '16px',
                 }}
               >
