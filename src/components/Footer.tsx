@@ -151,9 +151,9 @@ export default function Footer() {
             <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
               {[
                 { icon: Phone, text: '0413 056 207', href: 'tel:0413056207' },
-                { icon: Mail, text: 'imperialwindowcleaning@gmail.com', href: 'mailto:imperialwindowcleaning@gmail.com' },
-                { icon: Globe, text: 'imperialwindowcleaning.com', href: '#' },
-                { icon: MapPin, text: 'Brisbane - Sunshine Coast', href: '#' },
+                { icon: Mail, text: 'Imperial.ceo@icloud.com', href: 'mailto:Imperial.ceo@icloud.com' },
+                { icon: Globe, text: 'imperialwindowcleaning.com.au', href: 'https://imperialwindowcleaning.com.au' },
+                { icon: MapPin, text: 'Brisbane - Sunshine Coast', href: 'https://www.google.com/maps/place/Imperial+Window+Cleaning+Qld/@-27.386689,152.4107476,8.32z/data=!4m6!3m5!1s0x4c1de21141633ebd:0xcb41edf12d5c611d!8m2!3d-27.1687189!4d153.1103469!16s%2Fg%2F11z3nxxkdf?entry=ttu&g_ep=EgoyMDI2MDcyOC4wIKXMDSoASAFQAw%3D%3D' },
               ].map(({ icon: Icon, text, href }) => (
                 <a
                   key={text}

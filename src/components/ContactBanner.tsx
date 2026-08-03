@@ -144,7 +144,7 @@ export default function ContactBanner() {
             >
               {[
                 { icon: Phone, text: '0413 056 207' },
-                { icon: Mail, text: 'imperialwindowcleaning@gmail.com' },
+                { icon: Mail, text: 'Imperial.ceo@icloud.com' },
               ].map((item, i) => (
                 <motion.div
                   key={i}
@@ -175,12 +175,13 @@ export default function ContactBanner() {
             }}
           >
             <form
-              // action="https://formspree.io/f/xbjndlza"
+              action="https://api.web3forms.com/submit"
               method="POST"
               style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}
             >
               {/* hidden inputs */}
               <input type="hidden" name="_subject" value="New Quote Request" />
+              <input type="hidden" name="access_key" value="ff24c4fc-37f1-4687-b494-75d38ef5f01f"/>
 
               {[
                 { icon: User, placeholder: 'Full Name', name: 'name' },
